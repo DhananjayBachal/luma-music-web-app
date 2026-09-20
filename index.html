@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luma is a focused music listening space for your daily rotation.">
+  <title>Luma Music</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Luma home"><span class="brand-mark">✦</span><span>Luma</span></a>
+      <nav class="primary-nav">
+        <a class="nav-link active" href="#discover"><span class="nav-icon">⌂</span>Discover</a>
+        <a class="nav-link" href="#browse"><span class="nav-icon">◌</span>Browse</a>
+        <a class="nav-link" href="#radio"><span class="nav-icon">◉</span>Radio</a>
+      </nav>
+      <div class="nav-group">
+        <p class="nav-label">Your library</p>
+        <a class="nav-link" href="#recent"><span class="nav-icon">◴</span>Recently played</a>
+        <a class="nav-link" href="#albums"><span class="nav-icon">▣</span>Albums</a>
+        <a class="nav-link" href="#artists"><span class="nav-icon">♧</span>Artists</a>
+      </div>
+      <div class="nav-group playlists">
+        <p class="nav-label">Playlists <button class="add-button" type="button" aria-label="Create playlist">+</button></p>
+        <a class="playlist-link" href="#">Late night glow</a>
+        <a class="playlist-link" href="#">Sunday reset</a>
+        <a class="playlist-link" href="#">Workday focus</a>
+      </div>
+      <div class="sidebar-footer"><span class="pulse-dot"></span>Listening privately</div>
+    </aside>
+
+    <main class="main-content" id="discover">
+      <header class="topbar">
+        <div class="history-controls" aria-label="History controls"><button type="button" aria-label="Go back">‹</button><button type="button" aria-label="Go forward">›</button></div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search songs, artists, albums" autocomplete="off"></label>
+        <button class="profile-button" type="button"><span class="avatar">AS</span><span class="profile-name">Alex Smith</span><span>⌄</span></button>
+      </header>
+
+      <section class="welcome-row">
+        <div><p class="eyebrow">Thursday, September 17</p><h1>Good evening, Alex.</h1><p class="subheading">A little bit of rhythm for wherever today takes you.</p></div>
+        <button class="outline-button" id="shuffleButton" type="button"><span>⤨</span> Shuffle mix</button>
+      </section>
+
+      <section class="featured-grid" aria-label="Featured music">
+        <article class="feature-card feature-main" style="--art: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1000&q=80')">
+          <div class="feature-copy"><span class="tag">LUMA ORIGINAL</span><h2>Find your<br>night rhythm.</h2><p>Handpicked electronic and alt-pop for the after-hours.</p><button class="play-cta" data-song="Night Drive" type="button"><span class="play-icon">▶</span> Play collection</button></div>
+        </article>
+        <article class="feature-card feature-small" style="--art: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=700&q=80')"><div><span class="tag">NEW RELEASE</span><h3>Echoes in<br>the Static</h3><p>Maris Vale</p></div><button class="round-play" data-song="Echoes in the Static" aria-label="Play Echoes in the Static" type="button">▶</button></article>
+        <article class="feature-card feature-small warm" style="--art: url('https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=700&q=80')"><div><span class="tag">EDITOR'S PICK</span><h3>Golden<br>hour energy</h3><p>12 tracks to lift the room</p></div><button class="round-play" data-song="Golden Hour" aria-label="Play Golden Hour" type="button">▶</button></article>
+      </section>
+
+      <section class="content-section" id="recent">
+        <div class="section-heading"><div><p class="eyebrow">For your ears</p><h2>Made for you</h2></div><a href="#" class="see-all">See all <span>→</span></a></div>
+        <div class="album-grid" id="albumGrid">
+          <article class="album-card" data-title="Velvet Season" data-artist="Maya Rue"><div class="album-art art-one"><button class="card-play" data-song="Velvet Season" aria-label="Play Velvet Season" type="button">▶</button></div><h3>Velvet Season</h3><p>Maya Rue · New music</p></article>
+          <article class="album-card" data-title="Soft Focus" data-artist="Kieran Bloom"><div class="album-art art-two"><button class="card-play" data-song="Soft Focus" aria-label="Play Soft Focus" type="button">▶</button></div><h3>Soft Focus</h3><p>Kieran Bloom · Album</p></article>
+          <article class="album-card" data-title="Parallel Lines" data-artist="Sol & The City"><div class="album-art art-three"><button class="card-play" data-song="Parallel Lines" aria-label="Play Parallel Lines" type="button">▶</button></div><h3>Parallel Lines</h3><p>Sol &amp; The City · Album</p></article>
+          <article class="album-card" data-title="Afterimage" data-artist="Nia Archive"><div class="album-art art-four"><button class="card-play" data-song="Afterimage" aria-label="Play Afterimage" type="button">▶</button></div><h3>Afterimage</h3><p>Nia Archive · EP</p></article>
+        </div>
+      </section>
+
+      <section class="content-section trending" id="browse">
+        <div class="section-heading"><div><p class="eyebrow">The pulse right now</p><h2>Trending tracks</h2></div><a href="#" class="see-all">Open charts <span>→</span></a></div>
+        <div class="track-list" id="trackList">
+          <button class="track-row" data-song="Satellite Heart" type="button"><span class="track-number">01</span><span class="track-thumb thumb-one"></span><span class="track-details"><strong>Satellite Heart</strong><small>Juniper Club</small></span><span class="track-album">Soft Focus</span><span class="track-time">3:42</span><span class="track-more">•••</span></button>
+          <button class="track-row" data-song="Blue Hour" type="button"><span class="track-number">02</span><span class="track-thumb thumb-two"></span><span class="track-details"><strong>Blue Hour</strong><small>Oren Lake</small></span><span class="track-album">Night Swim</span><span class="track-time">4:08</span><span class="track-more">•••</span></button>
+          <button class="track-row" data-song="Anywhere With You" type="button"><span class="track-number">03</span><span class="track-thumb thumb-three"></span><span class="track-details"><strong>Anywhere With You</strong><small>Maris Vale</small></span><span class="track-album">Echoes in the Static</span><span class="track-time">2:56</span><span class="track-more">•••</span></button>
+          <button class="track-row" data-song="Slow Motion" type="button"><span class="track-number">04</span><span class="track-thumb thumb-four"></span><span class="track-details"><strong>Slow Motion</strong><small>Paper Forest</small></span><span class="track-album">Golden Hour</span><span class="track-time">3:31</span><span class="track-more">•••</span></button>
+        </div>
+      </section>
+    </main>
+
+    <aside class="now-playing" aria-label="Now playing">
+      <div class="now-playing-top"><span class="eyebrow">Now playing</span><button class="more-button" type="button" aria-label="More options">•••</button></div>
+      <div class="now-art" id="nowArt"></div>
+      <div class="now-meta"><div><h2 id="nowTitle">Night Drive</h2><p id="nowArtist">Luma Sessions</p></div><button id="likeButton" class="like-button" type="button" aria-label="Like song">♡</button></div>
+      <div class="progress-area"><input id="progressInput" class="progress-track" type="range" min="0" max="100" value="0" aria-label="Seek through song"><div class="time-row"><span id="currentTime">0:00</span><span id="durationTime">0:00</span></div></div>
+      <div class="player-controls"><button id="previousButton" type="button" aria-label="Previous track">↶</button><button class="main-play" id="mainPlay" type="button" aria-label="Play">▶</button><button id="nextButton" type="button" aria-label="Next track">↷</button></div>
+      <div class="volume-row"><button id="muteButton" type="button" aria-label="Mute audio">⌁</button><input id="volumeInput" class="volume-track" type="range" min="0" max="1" step="0.01" value="0.72" aria-label="Volume"><button id="volumeButton" type="button" aria-label="Volume">⌕</button></div>
+      <div class="queue-heading"><h3>Up next</h3><button id="clearQueue" type="button">Clear</button></div>
+      <div class="queue-list"><button class="queue-item" data-song="Moonlit Rooms" type="button"><span class="queue-thumb queue-one"></span><span><strong>Moonlit Rooms</strong><small>Violet Cinema</small></span><span>3:21</span></button><button class="queue-item" data-song="Open Water" type="button"><span class="queue-thumb queue-two"></span><span><strong>Open Water</strong><small>Atlas Park</small></span><span>4:02</span></button></div>
+    </aside>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite">Playing Night Drive</div>
+  <audio id="audioPlayer" preload="metadata"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
